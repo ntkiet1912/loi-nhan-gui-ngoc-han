@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Một bức thư zô tri</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="avatar">
+        <!-- Ảnh đại diện của người bạn muốn gởi lời chúc -->
+        <img src="./khochiu1.jpg" alt="" class="avatar__img" onclick="showMessage()" />
+        <!-- Tên của người đó -->
+        <h1 onclick="showMessage()" class="avatar__title">zô tri thì <br> nhấn vô đây</h1>
+    </div>
+
+    <!-- Phần nhạc -->
+    <audio id="player" autoplay loop>
+        <source src="./music.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var audio = document.getElementById("player");
+        var played = false;
+
+        function showMessage() {
+            if (!played) {
+                audio.addEventListener("ended", function () {
+                    this.currentTime = 0;
+                    this.play();
+                });
+                audio.play();
+                played = true;
+            }
+            swal({
+                title: "Lời nhắn zô tri từ vũ trụ 😚 ", 
+                text: "Gửi đến cổ , hôm nay là ngày 29/2 , là một dịp đặc biệt mà 4 năm mới có 1 lần , vậy nên ảnh sẽ mạnh dạn nói ra những điều mà ảnh chưa nói , cổ không cần phải nhớ về quá khứ nữa , ảnh không sợ mình không tốt bằng người ta nhưng mà ảnh sẽ đối xử tốt với cổ hết mức có thể để cổ sẽ chỉ nhớ mỗi ảnh thoi . Thế giới này tổn thương cổ bao nhiêu thì ảnh sẽ yêu thương cổ gấp đôi như vậy 🤭 .  \n ' Thế giới này rất đông người , đã gặp được nhau nếu có thể hãy ở lại nhé . 🥰 '",
+                button: {
+                    text: "❤️️",
+                },
+            });
+        }
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

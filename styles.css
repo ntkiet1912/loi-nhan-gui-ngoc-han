@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('2duavotri.jpg'); /* Thay 'background.jpg' bằng đường dẫn đến hình nền của bạn */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 800px;
+    height: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    position: relative;
+}
+/* Avatar  */
+.avatar {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 100px);
+}
+
+.avatar__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid rgba(234, 15, 150, 0.9);
+    box-shadow: inset 10px 10px 10px rgba(15, 219, 234, 0.9);
+    
+}
+
+.avatar__title {
+    cursor: pointer;
+    margin-top: -100px;
+    color: #ff69b4;
+}
+h1 {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    color: white;
+    font-size: 3.5em;
+}
+.swal-overlay {
+    background-color: rgba(218, 57, 177, 0.45);
+}
+
+.swal-text {
+    font-size: 20px;
+    font-weight: 200;
+    word-spacing: 5px;
+}
